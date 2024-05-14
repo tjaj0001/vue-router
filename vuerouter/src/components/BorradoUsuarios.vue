@@ -1,20 +1,24 @@
 <script>
+import datos from '@/components/DatosUsuarios.vue'
 export default {
   data()
   {
-    return {
-      usuarios: [
-        {id: 1, nombre: 'Tomás', username: 'tomasj10'},
-        {id: 2, nombre: 'Fernando', username: 'fsc00016'},
-      ],
-      usuario: {},
-    }
+     return {
+       usuarios: datos.data().usuarios,
+     }
   },
+  computed: {
+    usuario(){
+      return datos.computed.usuario(this.$route.params.id)
+    }
+  }
 }
 </script>
 
 <template>
-  <button>Eliminar usuario</button>
+  <div v-if="usuario">
+    <p>Has eliminado al usuario {{usuario.nombre}}, con id {{usuario.id}}</p>
+  </div>
 </template>
 
 <style scoped>

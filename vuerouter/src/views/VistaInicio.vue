@@ -5,11 +5,6 @@
     components: {
       ComponenteInicio
 
-    },
-    data() {
-      return {
-        message: 'Y este es la vista de Inicio'
-      }
     }
   }
 
@@ -17,5 +12,4 @@
 
 <template>
   <ComponenteInicio/>
-  <p>{{message}}</p>
 </template>
