@@ -1,47 +1,39 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+  import {defineComponent} from "vue";
+  import PîePagina from "@/components/FooterComponent.vue";
+  export default defineComponent({
+    components: {PîePagina},
+    data() {
+      return {
+        usuarios: [
+          {id: 1, nombre: 'Tomás Jesús', username: 'tomasj10'},
+          {id: 2, nombre: 'Fernando', username: 'fsc00016'},
+        ]
+      }
+    }
+  })
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <RouterLink to="/">Inicio</RouterLink>
+        <RouterLink to="/alta">Alta</RouterLink>
+        <RouterLink to="/listado">Vista</RouterLink>
+        <RouterLink to="/borrado/id:">Borrado</RouterLink>
+        <p> Ruta actual: {{$route.fullPath}} </p>
+      </nav>
+    </header>
+  </div>
 
   <main>
-    <TheWelcome />
+    <RouterView />
   </main>
+
+  <footer>
+    <PîePagina />
+  </footer>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>

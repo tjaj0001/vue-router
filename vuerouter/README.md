@@ -2,7 +2,7 @@
 
 ### Descripción
 
-Este trabajo dirigido está enfocado en el enrutamiento de páginas mediante la biblioteca Router de Vue.js, framework de js. 
+Este trabajo dirigido está enfocado en el enrutamiento de páginas mediante la biblioteca VueRouter de Vue.js, framework de js. 
 
 ### Autores
 
