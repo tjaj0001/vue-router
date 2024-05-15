@@ -1,10 +1,36 @@
-@import './base.css';
+@import "base.css";
+
+body{
+  background-color: #282828;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  place-items: center;
+  border-bottom: 1px solid black;
+  justify-content: center;
+  font-size: 16px;
+}
+
+header .wrapper {
+  display: flex;
+  place-items: flex-start;
+  flex-wrap: wrap;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
 }
 
 a,
@@ -12,24 +38,50 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
-  padding: 3px;
+  padding: 10px;
+  font-weight: bold;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+nav, main {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  align-items: center;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+input {
+  border-radius: 5%;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error h2 {
+  color: #f2f2f2;
+  font-weight: bolder;
+}
+
+a:hover {
+  color: hsla(160, 100%, 37%, 0.2);
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-leave-active, .fade-enter-active {
+  transition-duration: 500ms;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+footer {
+  padding: 10px;
 }

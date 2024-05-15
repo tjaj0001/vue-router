@@ -1,5 +1,6 @@
 <script>
 import datos from "@/components/DatosUsuarios.vue"
+
 export default {
   props: {
     id: {
@@ -17,7 +18,7 @@ export default {
       return this.usuarios.find(usuario =>
                                 usuario.id === this.id)
     }
-  }
+  },
   /*methods: {
     async init(){
       const response = await fetch('url/${this.$route.params.slug') //en el caso de que contásemos con un servicio REST
@@ -33,10 +34,6 @@ export default {
 
 <template>
   <div v-if="usuario">
-    <h2>Hola, {{ usuario.nombre }} tu id es: {{usuario.id}}</h2>
+    <h2>{{ usuario.nombre }} </h2>
   </div>
 </template>
-
-<style scoped>
-
-</style>

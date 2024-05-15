@@ -1,12 +1,12 @@
 <script>
-import Muestra from "@/components/MuestraUsuario.vue"
+import Perfil from "@/components/PerfilUsuario.vue"
 export default {
   components:{
-    Muestra
+    Perfil
   }
 }
 </script>
 
 <template>
-  <Muestra />
+  <Perfil />
 </template>

@@ -1,17 +1,14 @@
 <script>
   export default {
-    methods: {
-      goToVistaAlta() {
-        this.$router.push('/alta')
-      },
-    },
     data() {
       return {
-        message:'Esta es la vista Inicio'
+        message:'Bienvenido, esta es la vista Inicio'
       }
     }
   }
   </script>
+
+
 <template>
   <div>
     <h1>

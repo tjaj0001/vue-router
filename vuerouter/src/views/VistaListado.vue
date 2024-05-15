@@ -1,7 +1,9 @@
 <script>
 import Listado from "@/components/ListadoUsuarios.vue"
   export default {
-    components: {Listado},
+    components: {
+      Listado
+    },
   }
 </script>
 

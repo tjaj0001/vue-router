@@ -3,29 +3,43 @@ import {createWebHistory, createRouter} from 'vue-router'
 import Inicio from "@/views/VistaInicio.vue"    //manera 1 de importar el componente
 
 const routes = [
-    {path: '/', name: 'inicio', component: Inicio },   //manera 1 de importar el componente
+    {path: '/', name: 'inicio', component: Inicio, meta: { pageTitle: 'Inicio'} },   //manera 1 de importar el componente
     
-    {path: '/alta', name: 'alta', component: () => import('@/views/VistaAlta.vue') },  //manera 2 de importarlo
+    {path: '/alta', name: 'alta', component: () => import('@/views/VistaAlta.vue'), meta: { pageTitle: 'Registro'} },  //manera 2 de importarlo
 
-    {path: '/listado', name: 'listado', component: () => import('@/views/VistaListado.vue')},
+    {path: '/listado', name: 'listado', component: () => import('@/views/VistaListado.vue'), meta:  { pageTitle: 'Listado'} },
 
-    {path: '/muestra/:id(\\d+)',
-        name: 'muestra',
-        component: () => import('@/views/VistaMuestra.vue'),
+    {path: '/perfil/:id(\\d+)',
+        name: 'perfil',
+        component: () => import('@/views/VistaPerfil.vue'),
         sensitive: true,
         props: ruta=> ({
             id: parseInt(ruta.params.id)
-        }) },
+        }),
+        meta: { pageTitle: 'Perfil'
+                },
+        /* children: [
+            {
+                path: 'datos',
+                name: 'datos',
+                component: () => import('@/views/VistaDatos.vue'),
+                props: ruta => ({
+                    id: parseInt(ruta.params.id)
+                }),
+            }
+        ]   */
+    },
 
     {path: '/borrado/:id(\\d+)',
         name: 'borrado',
         component: () => import('@/views/VistaBorrado.vue'),
-        sensitive: true},
-
+        sensitive: true,
+        meta: { pageTitle: 'Borrado'} },
 
     {path: '/:pathMatch(.*)*',
-     name: 'error',
-     component: () => import('@/views/VistaError.vue')},
+        name: 'error',
+        component: () => import('@/views/VistaError.vue'),
+        meta: { pageTitle: 'Error'} },  //título de la página
 ]
 
 const router = createRouter({
@@ -33,4 +47,7 @@ const router = createRouter({
     routes,
     strict: true,
 })
+router.beforeEach((to) => {
+    document.title = to.meta.pageTitle;
+} ) //asignar el título de la página
 export default router

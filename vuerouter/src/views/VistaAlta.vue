@@ -9,4 +9,4 @@ export default {
 
 <template>
   <ComponenteAlta/>
-  </template>
+</template>

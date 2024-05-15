@@ -18,6 +18,6 @@ export default {
 
 <template>
   <div v-if="usuario">
-    <p>Has eliminado al usuario {{usuario.nombre}}, con id {{usuario.id}}</p>
+    <h2>Has eliminado al usuario {{usuario.nombre}}, con id {{usuario.id}}</h2>
   </div>
 </template>

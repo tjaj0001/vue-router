@@ -4,12 +4,11 @@
   export default {
     components: {
       ComponenteInicio
-
     }
   }
 
 </script>
 
 <template>
-  <ComponenteInicio/>
+    <ComponenteInicio/>
 </template>
