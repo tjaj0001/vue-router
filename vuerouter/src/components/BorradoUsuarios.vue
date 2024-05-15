@@ -8,8 +8,9 @@ export default {
      }
   },
   computed: {
-    usuario(){
-      return datos.computed.usuario(this.$route.params.id)
+    usuario() {
+      return this.usuarios.find(usuario =>
+          usuario.id === parseInt(this.$route.params.id))
     }
   }
 }
@@ -20,7 +21,3 @@ export default {
     <p>Has eliminado al usuario {{usuario.nombre}}, con id {{usuario.id}}</p>
   </div>
 </template>
-
-<style scoped>
-
-</style>

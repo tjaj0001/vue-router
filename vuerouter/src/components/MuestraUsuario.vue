@@ -1,6 +1,12 @@
 <script>
 import datos from "@/components/DatosUsuarios.vue"
 export default {
+  props: {
+    id: {
+      type: Number,
+      required: true
+    }
+  },
   data(){
     return{
       usuarios: datos.data().usuarios,
@@ -9,12 +15,12 @@ export default {
   computed: {
     usuario() {
       return this.usuarios.find(usuario =>
-                                usuario.id === parseInt(this.$route.params.id))
+                                usuario.id === this.id)
     }
   }
   /*methods: {
     async init(){
-      const response = await fetch('url/${this.$route.params.slug') en el caso de que contásemos con un servicio REST
+      const response = await fetch('url/${this.$route.params.slug') //en el caso de que contásemos con un servicio REST
       this.usuario = await response.json()
     },
     async creado()
