@@ -25,5 +25,40 @@ const router = createRouter({
             return { el: '#main', top: 10 }
         }
     },
+
 })
+/*El siguiente ejemplo para probar un navigation Failure trabaja sobre la vista alta porque es sobre la que
+* se pueden realizar modificaciones que queden reflejadas en la página para hacer pruebas*/
+import { NavigationFailureType, isNavigationFailure } from 'vue-router'
+
+//intento de dejar la página que se esta editando sin guardar cambios.
+const failure = await router.push('/alta')
+
+if (isNavigationFailure(failure, NavigationFailureType.aborted)) {
+    // muestra un mensaje
+    alert('Tienes cambios sin guardar, ¿dejar la página?')
+}
+//const navigationResult = await router.push('/borrado') -> SI ESTA VARIABLE DEVUELVE UN VALOR, QUIERE DECIR QUE EL
+// NAVIGATION GUARD NO TERMINO CORRECTAMENTE LA NAVEGACION DEBIDO A LA ESPERA POR LA NAVEGACION A LA RUTA ALTA Y RECOPILA
+// INFORMACIÓN SOBRE ELLO
+
+//if (navigationResult) {
+    /*Navegación cancelada
+    * debido posiblemente a navigation guard,
+    * navigationResult contendrá un objeto con
+    * información sobre la navegación prevista*/
+//} else {
+    //navigationResult devolverá undefined.
+    // navegación exitosa, con lo cual se produciría una redirección
+    /*
+     Acción a realizar cuando se produzca redirección. En este caso el menu de prueba
+     se cierra una vez que se ha llegado a la nueva página.
+    */
+    //this.isMenuOpen = false
+//}
 export default router
+/*  Prueba de navegación asíncrona
+    await router.push('/listado')
+    this.isMenuOpen = false
+
+ */
