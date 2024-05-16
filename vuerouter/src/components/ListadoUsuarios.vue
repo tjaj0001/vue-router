@@ -26,5 +26,8 @@
                             <!--parámetros para la ruta, el id necesario en la ruta-->
       </tr>
     </table>
-
+    <div id="main" style="height: 50px; background-color: #282828; width:200px;">
+      <!-- Contenido de prueba -->
+      <p>punto de referencia con id main para scroll Behavior.</p>
+    </div>
 </template>
