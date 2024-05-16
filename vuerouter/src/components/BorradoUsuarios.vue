@@ -20,7 +20,8 @@ export default {
 </script>
 
 <template>
-  <div v-if="usuario" >
+  <div class="error"
+       v-if="usuario" >
     <h2>Eliminado {{usuario.nombre}}, id: {{usuario.id}}</h2>
     <h1>Listado de usuarios</h1>
 
