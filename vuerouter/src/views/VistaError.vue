@@ -7,4 +7,27 @@
     <!-- Contenido de prueba -->
     <p>punto de referencia con id main para scroll Behavior.</p>
   </div>
+  <script>
+          /* EJEMPLO DE COMPROBACIÓN SOBRE TIPOS DE FALLOS DE NAVEGACIÓN PARA PODER MANEJARLOS Y SOLUCIONAR PROBLEMAS.
+             TAMBIÉN SE PUEDE IMPLEMENTAR EN ROUTER.JS
+          export default {
+            name: 'App',
+            created() {
+              this.$router.onError(error => {
+                if (error && error.type === NavigationFailureType.redirected) {
+                  console.log("La navegación fue redirigida a otra ruta");
+                } else if (error && error.type === NavigationFailureType.aborted) {
+                  console.log("La navegación fue abortada");
+                } else if (error && error.type === NavigationFailureType.cancelled) {
+                  console.log("La navegación fue cancelada");
+                } else if (error && error.type === NavigationFailureType.duplicated) {
+                  console.log("La navegación fue duplicada");
+                } else if (error && error.type === NavigationFailureType.uncaught) {
+                  console.log("Error no capturado durante la navegación");
+                }
+              });
+            }
+          }
+           */
+  </script>
 </template>
