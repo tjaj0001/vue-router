@@ -1,17 +1,7 @@
-<script>
-  export default {
-    data() {
-      return {
-        message: 'Y este es el footer'
-      }
-    }
-  }
-</script>
-
 <template>
-  <span>{{message}}</span>
+  <div class="logo">
+    <img src="@/assets/logo.svg" />
+    <a href="https://github.com/tomasj10/vue-router"><img class="github"
+                                                          src="@/assets/github.png" /></a>
+  </div>
 </template>
-
-<style scoped>
-
-</style>

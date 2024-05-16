@@ -2,7 +2,10 @@
   export default {
     data() {
       return {
-        message:'Bienvenido, esta es la vista Inicio'
+        title:'Vue Router',
+        message: 'Este trabajo está enfocado a la explicación de Vue Router ' +
+            'mediante las diapositivas y enseñar ejemplos ' +
+            'de lo explicado en esta sencilla aplicación'
       }
     }
   }
@@ -12,7 +15,8 @@
 <template>
   <div>
     <h1>
-      {{message}}
+      {{title}}
     </h1>
+    <p>{{message}}</p>
   </div>
 </template>

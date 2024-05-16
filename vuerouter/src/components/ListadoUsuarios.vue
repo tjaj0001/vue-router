@@ -6,17 +6,15 @@
         usuarios: datos.data().usuarios
       }
     },
-    eliminarUsuario(id){
-      return this.usuarios.pop(this.usuario.id === id)
-    },
   }
 </script>
-
 <template>
+
+    <h1>Listado de datos</h1>
 
     <table>
       <tr>
-        <td>Id</td><td>Nombre</td><td>Username</td><td>Visualizar</td><td>Eliminar</td>
+        <td>Id</td><td>Nombre</td><td>Username</td><td>Visualizar</td>
       </tr>
       <tr v-for="user in usuarios" :key="user.id">
         <td>{{user.id}}</td>
@@ -26,10 +24,6 @@
           <RouterLink :to="{ name: 'perfil',
                              params: {id: user.id}}">Ver</RouterLink></td>
                             <!--parámetros para la ruta, el id necesario en la ruta-->
-        <td>
-          <RouterLink :to="{ name: 'borrado',
-                             params: {id: user.id}}">Borrar</RouterLink>
-        </td>
       </tr>
     </table>
 

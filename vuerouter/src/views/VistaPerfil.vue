@@ -1,12 +1,13 @@
 <script>
-import Perfil from "@/components/PerfilUsuario.vue"
+import perfil from "@/components/PerfilUsuario.vue"
+
 export default {
   components:{
-    Perfil
-  }
+    perfil
+  },
 }
 </script>
 
 <template>
-  <Perfil />
+  <perfil />
 </template>

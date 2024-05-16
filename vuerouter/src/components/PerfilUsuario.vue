@@ -19,21 +19,24 @@ export default {
                                 usuario.id === this.id)
     }
   },
-  /*methods: {
-    async init(){
-      const response = await fetch('url/${this.$route.params.slug') //en el caso de que contásemos con un servicio REST
-      this.usuario = await response.json()
-    },
-    async creado()
-    {
-      this.init()
-    }
-  },*/
 }
 </script>
 
 <template>
-  <div v-if="usuario">
-    <h2>{{ usuario.nombre }} </h2>
+
+
+  <div class="error"
+       v-if="usuario">
+
+    <p>Id de ruta: {{this.$route.params.id}}</p>
+
+    <h3>Id: {{usuario.id}}</h3>
+    <h3>Nombre: {{usuario.nombre}}</h3>
+    <h3>Username: {{usuario.username}}</h3>
+    <RouterLink :to="{ name: 'borrado',
+                     params: {
+                              id: id }
+                   }">Borrar</RouterLink>
+    <RouterView />
   </div>
 </template>

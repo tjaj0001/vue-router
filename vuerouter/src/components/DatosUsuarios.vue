@@ -6,6 +6,6 @@ export default {
     return {
       usuarios: datos.usuarios,
     }
-  }
+  },
 }
 </script>

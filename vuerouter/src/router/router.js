@@ -1,9 +1,13 @@
-import {createWebHistory, createRouter} from 'vue-router'
-
+import {createWebHistory,
+        createRouter} from 'vue-router'
 import Inicio from "@/views/VistaInicio.vue"    //manera 1 de importar el componente
 
 const routes = [
-    {path: '/', name: 'inicio', component: Inicio, meta: { pageTitle: 'Inicio'} },   //manera 1 de importar el componente
+    {path: '/',
+        name: 'inicio',
+        component: Inicio,
+
+        meta: { pageTitle: 'Inicio'} },   //manera 1 de importar el componente
     
     {path: '/alta', name: 'alta', component: () => import('@/views/VistaAlta.vue'), meta: { pageTitle: 'Registro'} },  //manera 2 de importarlo
 
@@ -18,16 +22,6 @@ const routes = [
         }),
         meta: { pageTitle: 'Perfil'
                 },
-        /* children: [
-            {
-                path: 'datos',
-                name: 'datos',
-                component: () => import('@/views/VistaDatos.vue'),
-                props: ruta => ({
-                    id: parseInt(ruta.params.id)
-                }),
-            }
-        ]   */
     },
 
     {path: '/borrado/:id(\\d+)',
@@ -42,11 +36,14 @@ const routes = [
         meta: { pageTitle: 'Error'} },  //título de la página
 ]
 
-const router = createRouter({
-    history: createWebHistory(),    //la url parecerá https://mipagina.com/inicio
-    routes,
-    strict: true,
+const router =
+    createRouter({
+        history: createWebHistory(),    //la url parecerá https://mipagina.com/inicio
+        routes,
+        strict: true,
 })
+
+//Asigna el título de forma dinámica
 router.beforeEach((to) => {
     document.title = to.meta.pageTitle;
 } ) //asignar el título de la página

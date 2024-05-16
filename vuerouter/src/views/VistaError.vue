@@ -1,6 +1,5 @@
 <template>
-  <div class="error"
-       :key="this.$route.params.id">
+  <div class="error">
     <h2>404: Página no encontrada</h2>
     <p> Aunque la página que has intentado buscar
       no ha sido encontrada,
