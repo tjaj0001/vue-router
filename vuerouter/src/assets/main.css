@@ -6,7 +6,9 @@ body{
   display: flex;
   flex-direction: column;
 }
-
+main{
+  margin-bottom:10px;
+}
 #app {
   display: flex;
   flex-direction: column;

@@ -9,6 +9,49 @@
     <!-- Contenido de prueba -->
     <p>punto de referencia con id main para scroll Behavior.</p>
   </div>
+  <div>
+    <!-- Contenido de prueba  PARA MOSTRAR QUE SCROLL BEHAVIOR SE REALIZA CORRECTAMENTE CUANDO TENEMOS MAS CONTENIDO EN LA VISTA.-->
+    <!--<p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>
+    <p>TEXTO</p>-->
+  </div>
   <!--<script>
     /* EJEMPLO DE COMPROBACIÓN SOBRE TIPOS DE FALLOS DE NAVEGACIÓN PARA PODER MANEJARLOS Y SOLUCIONAR PROBLEMAS.
        TAMBIÉN SE PUEDE IMPLEMENTAR EN ROUTER.JS
