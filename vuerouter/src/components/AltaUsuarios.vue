@@ -1,5 +1,4 @@
 <script>
-  import datos from '@/components/DatosUsuarios.vue'
   export default {
     data(){
       return{
@@ -8,13 +7,6 @@
           username: '',
         },
         message:'Registro',
-        usuarios: datos.data().usuarios,
-      }
-    },
-    computed: {
-      newArray()
-      {
-        return this.usuarios.slice(0).push(this.usuario)
       }
     },
   }
@@ -38,10 +30,5 @@
              v-model="usuario.username"
              maxlength="20" />
     </label>
-    <table>
-      <tr v-for="user in newArray" :key="user.id">
-        <td>{{user.nombre}}</td>
-      </tr>
-    </table>
   </div>
 </template>

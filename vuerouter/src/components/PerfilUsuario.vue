@@ -37,6 +37,5 @@ export default {
                      params: {
                               id: id }
                    }">Borrar</RouterLink>
-    <RouterView />
   </div>
 </template>

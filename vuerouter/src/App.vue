@@ -19,19 +19,19 @@
 
   </div>
 
-  <RouterView :key="$route.fullPath" />
+  <!-- <RouterView :key="$route.fullPath" /> -->
 
-  <!--
+
   <RouterView v-slot="{ Component } ">
     <transition name='fade'
                 mode="out-in" >
-      <keep-alive>
+   <!--   <keep-alive> -->
         <component :is="Component"
-                   :key="$route.path" />
-      </keep-alive>
+                   :key="$route.fullPath" />
+   <!--   </keep-alive> -->
     </transition>
   </RouterView>
-  -->
+
 
   <footer>
     <pie />
