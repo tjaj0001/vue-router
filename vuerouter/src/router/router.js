@@ -62,14 +62,14 @@ const router =
 
     /*El siguiente ejemplo esta sacado de la guia de Vue para probar un navigation Failure trabaja sobre la vista alta porque es sobre la que
     * se pueden realizar modificaciones que queden reflejadas en la página para hacer pruebas*/
-    /*import { NavigationFailureType, isNavigationFailure } from 'vue-router'
+    /*import {NavigationFailureType, isNavigationFailure} from 'vue-router'
 
     // trying to leave the editing page of an article without saving
-    const failure = await router.push('/borrado/2')
+    const failure = await router.push('/alta')
 
     if (isNavigationFailure(failure, NavigationFailureType.cancelled)) {
-        // show a small notification to the user
-        showToast('You have unsaved changes, discard and leave anyway?')
+        //muestra una notificacion
+        showToast('Tienes cambios sin guardar, Dejar los cambios y salir?')
     }*/
 
 
